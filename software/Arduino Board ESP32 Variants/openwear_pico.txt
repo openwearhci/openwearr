@@ -1,0 +1,177 @@
+openwear_pico.name=OpenWear
+
+openwear_pico.bootloader.tool=esptool_py
+openwear_pico.bootloader.tool.default=esptool_py
+
+openwear_pico.upload.tool=esptool_py
+openwear_pico.upload.tool.default=esptool_py
+openwear_pico.upload.tool.network=esp_ota
+
+openwear_pico.upload.maximum_size=1310720
+openwear_pico.upload.maximum_data_size=327680
+openwear_pico.upload.flags=
+openwear_pico.upload.extra_flags=
+
+openwear_pico.serial.disableDTR=true
+openwear_pico.serial.disableRTS=true
+
+openwear_pico.build.tarch=xtensa
+openwear_pico.build.bootloader_addr=0x1000
+openwear_pico.build.target=esp32
+openwear_pico.build.mcu=esp32
+openwear_pico.build.core=esp32
+openwear_pico.build.variant=openwear_pico
+openwear_pico.build.board=OPENWEAR_PICO
+
+openwear_pico.build.f_cpu=240000000L
+openwear_pico.build.flash_size=4MB
+openwear_pico.build.flash_freq=40m
+openwear_pico.build.flash_mode=dio
+openwear_pico.build.boot=dio
+openwear_pico.build.partitions=default
+openwear_pico.build.defines=
+openwear_pico.build.loop_core=
+openwear_pico.build.event_core=
+
+## IDE 2.0 Seems to not update the value
+openwear_pico.menu.JTAGAdapter.default=Disabled
+openwear_pico.menu.JTAGAdapter.default.build.copy_jtag_files=0
+openwear_pico.menu.JTAGAdapter.external=FTDI Adapter
+openwear_pico.menu.JTAGAdapter.external.build.openocdscript=esp32-wrover-kit-3.3v.cfg
+openwear_pico.menu.JTAGAdapter.external.build.copy_jtag_files=1
+openwear_pico.menu.JTAGAdapter.bridge=ESP USB Bridge
+openwear_pico.menu.JTAGAdapter.bridge.build.openocdscript=esp32-bridge.cfg
+openwear_pico.menu.JTAGAdapter.bridge.build.copy_jtag_files=1
+
+openwear_pico.menu.PSRAM.disabled=Disabled
+openwear_pico.menu.PSRAM.disabled.build.defines=
+openwear_pico.menu.PSRAM.disabled.build.extra_libs=
+openwear_pico.menu.PSRAM.enabled=Enabled
+openwear_pico.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue -mfix-esp32-psram-cache-strategy=memw
+openwear_pico.menu.PSRAM.enabled.build.extra_libs=
+
+openwear_pico.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+openwear_pico.menu.PartitionScheme.default.build.partitions=default
+openwear_pico.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+openwear_pico.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+openwear_pico.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+openwear_pico.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+openwear_pico.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+openwear_pico.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+openwear_pico.menu.PartitionScheme.minimal.build.partitions=minimal
+openwear_pico.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+openwear_pico.menu.PartitionScheme.no_ota.build.partitions=no_ota
+openwear_pico.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+openwear_pico.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+openwear_pico.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+openwear_pico.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+openwear_pico.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+openwear_pico.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+openwear_pico.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+openwear_pico.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+openwear_pico.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+openwear_pico.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+openwear_pico.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+openwear_pico.menu.PartitionScheme.huge_app.build.partitions=huge_app
+openwear_pico.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+openwear_pico.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+openwear_pico.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+openwear_pico.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+openwear_pico.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+openwear_pico.menu.PartitionScheme.fatflash.build.partitions=ffat
+openwear_pico.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+openwear_pico.menu.PartitionScheme.app3M_fat9M_16MB=16M Flash (3MB APP/9.9MB FATFS)
+openwear_pico.menu.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
+openwear_pico.menu.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
+openwear_pico.menu.PartitionScheme.rainmaker=RainMaker
+openwear_pico.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+openwear_pico.menu.PartitionScheme.rainmaker.upload.maximum_size=3145728
+
+openwear_pico.menu.CPUFreq.240=240MHz (WiFi/BT)
+openwear_pico.menu.CPUFreq.240.build.f_cpu=240000000L
+openwear_pico.menu.CPUFreq.160=160MHz (WiFi/BT)
+openwear_pico.menu.CPUFreq.160.build.f_cpu=160000000L
+openwear_pico.menu.CPUFreq.80=80MHz (WiFi/BT)
+openwear_pico.menu.CPUFreq.80.build.f_cpu=80000000L
+openwear_pico.menu.CPUFreq.40=40MHz (40MHz XTAL)
+openwear_pico.menu.CPUFreq.40.build.f_cpu=40000000L
+openwear_pico.menu.CPUFreq.26=26MHz (26MHz XTAL)
+openwear_pico.menu.CPUFreq.26.build.f_cpu=26000000L
+openwear_pico.menu.CPUFreq.20=20MHz (40MHz XTAL)
+openwear_pico.menu.CPUFreq.20.build.f_cpu=20000000L
+openwear_pico.menu.CPUFreq.13=13MHz (26MHz XTAL)
+openwear_pico.menu.CPUFreq.13.build.f_cpu=13000000L
+openwear_pico.menu.CPUFreq.10=10MHz (40MHz XTAL)
+openwear_pico.menu.CPUFreq.10.build.f_cpu=10000000L
+
+openwear_pico.menu.FlashMode.qio=QIO
+openwear_pico.menu.FlashMode.qio.build.flash_mode=dio
+openwear_pico.menu.FlashMode.qio.build.boot=qio
+openwear_pico.menu.FlashMode.dio=DIO
+openwear_pico.menu.FlashMode.dio.build.flash_mode=dio
+openwear_pico.menu.FlashMode.dio.build.boot=dio
+openwear_pico.menu.FlashMode.qout=QOUT
+openwear_pico.menu.FlashMode.qout.build.flash_mode=dout
+openwear_pico.menu.FlashMode.qout.build.boot=qout
+openwear_pico.menu.FlashMode.dout=DOUT
+openwear_pico.menu.FlashMode.dout.build.flash_mode=dout
+openwear_pico.menu.FlashMode.dout.build.boot=dout
+
+openwear_pico.menu.FlashFreq.80=80MHz
+openwear_pico.menu.FlashFreq.80.build.flash_freq=80m
+openwear_pico.menu.FlashFreq.40=40MHz
+openwear_pico.menu.FlashFreq.40.build.flash_freq=40m
+
+openwear_pico.menu.FlashSize.4M=4MB (32Mb)
+openwear_pico.menu.FlashSize.4M.build.flash_size=4MB
+openwear_pico.menu.FlashSize.8M=8MB (64Mb)
+openwear_pico.menu.FlashSize.8M.build.flash_size=8MB
+openwear_pico.menu.FlashSize.8M.build.partitions=default_8MB
+openwear_pico.menu.FlashSize.2M=2MB (16Mb)
+openwear_pico.menu.FlashSize.2M.build.flash_size=2MB
+openwear_pico.menu.FlashSize.2M.build.partitions=minimal
+openwear_pico.menu.FlashSize.16M=16MB (128Mb)
+openwear_pico.menu.FlashSize.16M.build.flash_size=16MB
+
+openwear_pico.menu.UploadSpeed.921600=921600
+openwear_pico.menu.UploadSpeed.921600.upload.speed=921600
+openwear_pico.menu.UploadSpeed.115200=115200
+openwear_pico.menu.UploadSpeed.115200.upload.speed=115200
+openwear_pico.menu.UploadSpeed.256000.windows=256000
+openwear_pico.menu.UploadSpeed.256000.upload.speed=256000
+openwear_pico.menu.UploadSpeed.230400.windows.upload.speed=256000
+openwear_pico.menu.UploadSpeed.230400=230400
+openwear_pico.menu.UploadSpeed.230400.upload.speed=230400
+openwear_pico.menu.UploadSpeed.460800.linux=460800
+openwear_pico.menu.UploadSpeed.460800.macosx=460800
+openwear_pico.menu.UploadSpeed.460800.upload.speed=460800
+openwear_pico.menu.UploadSpeed.512000.windows=512000
+openwear_pico.menu.UploadSpeed.512000.upload.speed=512000
+
+openwear_pico.menu.LoopCore.1=Core 1
+openwear_pico.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+openwear_pico.menu.LoopCore.0=Core 0
+openwear_pico.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+openwear_pico.menu.EventsCore.1=Core 1
+openwear_pico.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+openwear_pico.menu.EventsCore.0=Core 0
+openwear_pico.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+openwear_pico.menu.DebugLevel.none=None
+openwear_pico.menu.DebugLevel.none.build.code_debug=0
+openwear_pico.menu.DebugLevel.error=Error
+openwear_pico.menu.DebugLevel.error.build.code_debug=1
+openwear_pico.menu.DebugLevel.warn=Warn
+openwear_pico.menu.DebugLevel.warn.build.code_debug=2
+openwear_pico.menu.DebugLevel.info=Info
+openwear_pico.menu.DebugLevel.info.build.code_debug=3
+openwear_pico.menu.DebugLevel.debug=Debug
+openwear_pico.menu.DebugLevel.debug.build.code_debug=4
+openwear_pico.menu.DebugLevel.verbose=Verbose
+openwear_pico.menu.DebugLevel.verbose.build.code_debug=5
+
+openwear_pico.menu.EraseFlash.none=Disabled
+openwear_pico.menu.EraseFlash.none.upload.erase_cmd=
+openwear_pico.menu.EraseFlash.all=Enabled
+openwear_pico.menu.EraseFlash.all.upload.erase_cmd=-e
